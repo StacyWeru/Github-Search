@@ -5,7 +5,7 @@ import { Repository} from './../repository';
 
 @Component({
   selector: 'app-repository',
-  templateUrl: './repository.component.html',
+  template: './repository.component.html',
   providers:[InfoService],
   styleUrls: ['./repository.component.css']
 })

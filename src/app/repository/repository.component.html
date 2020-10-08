@@ -2,16 +2,16 @@
     <ul class="bar">
       <li>Git-hub Search</li>
     </ul>
-    <ng-progress></ng-progress>
-    <form (ngSubmit)='findProfile()' #searchForm='ngForm'>
+    
+    <form (ngSubmit)=' findUser()' #searchForm='ngForm'>
          <div class="form-group">
-           <input type="text" class="form-control" placeholder="search  git repos with username" [(ngModel)] ="username" name="username" (keyup)="findProfile()">
+           <input type="text" class="form-control" placeholder="search  git repositories with username" [(ngModel)] ="username" name="username" (keyup)=" findUser()">
          </div>
        </form>
   <h2 appHighlight>Repository</h2>
-        <p>Repo name:{{repo?.name}}</p>
-        <p><a href="{{repos?.html_url}}" class="btn btn-sm btn-success pull-right">View this Repo</a></p>
-        <p>Repo Description:{{repo?.description}}</p>
+        <p>Repository name:{{repository.name}}</p>
+        <p><a href="{{Repositorysitory.html_url}}" class="btn btn-sm btn-success pull-right">View this Repository</a></p>
+        <p>Repository Description:{{Repository.description}}</p>
   
   
   </div>
