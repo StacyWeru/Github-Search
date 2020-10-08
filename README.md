@@ -11,7 +11,7 @@ Github Search is a webpage that allows you to search through github for people y
 ## Demo
 Here is a working live demo :  https://StacyWeru.github.io/Github-Search/
 ## Mobile support
-The Quotes is compatible with devices of all sizes and all OS's, and consistent improvements are being made.
+This app is compatible with devices of all sizes and all OS's, and consistent improvements are being made.
 ## [Usage](https://StacyWeru.github.io/Github-Search/)
 ### Development
 Want to contribute? Awesome!
@@ -31,7 +31,7 @@ To fix a bug or enhance an existing module, follow these steps:
 ## Author
 - Stacy Weru
 ## License 
-[MIT](https://github.com/StacyWeru/Quotes/blob/master/LICENSE.md)
+[MIT](https://github.com/StacyWeru/Github-Search/blob/master/LICENSE.md)
  © [Stacy Weru](https://github.com/StacyWeru)
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.1.
 ## Development server
