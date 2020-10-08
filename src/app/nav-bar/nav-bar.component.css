@@ -1,0 +1,10 @@
+nav.opaque-navbar{
+    background-color: #fff;
+    border-bottom: 0px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.03);
+    transition: background-color .5s ease 0s;
+    height: 60px;
+}
+.inline{
+    display: inline;
+}
