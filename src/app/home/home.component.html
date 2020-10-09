@@ -1,10 +1,12 @@
 <div class="container">
     <h1>Welcome to Github Search </h1>
     <p>This webpage allows you to search through github for people you are interested in or repositories that may guide you on your coding way.</p>
-    <div>
-      <button class="username"><a routerLink='/username' routerLinkActive='active'>search using username</a></button>
+    <div class="users"> 
+      <button class="username" >
+        <a [routerLink]="['/users']"routerLinkActive='active'>search using username</a></button>
     </div>
-    <div>
-      <button class="repo"><a routerLink='/repository' routerLinkActive='active'>search using repository name</a></button>
+    <div class="repo">
+      <button class="repository"><a routerLink="/repository" routerLinkActive='active'>search using repository name</a></button>
     </div>
     </div>
+    <!-- <router-outlet></router-outlet> -->

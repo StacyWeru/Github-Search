@@ -15,8 +15,9 @@
     padding: 2.5%;
     background-color: #4CAF50;
     font-size: 20px;
-    color:white;
+    color:rgb(85, 20, 138);
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    border-radius: 20%;
   }
   .repository{
     width:250px;
@@ -24,6 +25,16 @@
     padding: 2.5%;
     background-color: #4CAF50;
     font-size: 20px;
-    color:white;
+    color:rgb(85, 20, 138);
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    border-radius: 20%;
   }
+  /* button{
+    align-items: center;
+    padding: 30px;
+    background-color:rgb(85, 20, 138)
+  } */
+
+  /* .users{
+    background-color:rgb(85, 20, 138)
+  } */

@@ -10,10 +10,10 @@ import { NotFoundComponent } from './not-found/not-found.component';
 
 
 const routes: Routes = [
-  { path:" home" , component:HomeComponent},
-  { path:" nav-bar" , component:NavBarComponent},
-  { path:" repository " , component:RepositoryComponent},
-  { path:" users" , component:UsersComponent},
+  { path:'home', component:HomeComponent},
+  { path:'nav-bar' , component:NavBarComponent},
+  { path:'repository', component:RepositoryComponent},
+  { path: 'users' , component:UsersComponent},
   { path:'**', component:NotFoundComponent},
 
   { path: '', redirectTo:"/home", pathMatch:"full"},
