@@ -18,7 +18,7 @@ export class RepositoryComponent implements OnInit {
     findUser(){
     this.InfoService.updateUser(this.username);
     this.InfoService.repoRequest();
-    this.repo=this.InfoService.repo
+    this.repo=this.InfoService.repository
   }
 
   ngOnInit(): void {
