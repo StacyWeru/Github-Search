@@ -12,11 +12,11 @@ export class InfoService {
  
   private username:string;
   User:User;
-  repo: Repository ;
+  repository: Repository ;
 
  constructor(private http:HttpClient) {
    this.User = new User("","","","","",0,0,0,new Date());
-   this.repo = new Repository("","","");
+   this.repository = new Repository("","","");
    this.username = '';
    }
    UserRequest(){
@@ -65,14 +65,14 @@ export class InfoService {
 
              let promise = new Promise((resolve,reject)=>{
                this.http.get<ApiResponse>(environment.apiUrl+ this.username + environment.apiRepos).toPromise().then(response=>{
-                 this.repo.name=response.name
-                 this.repo.description=response.description
-                 this.repo.html_url=response.html_url
+                 this.repository.name=response.name
+                 this.repository.description=response.description
+                 this.repository  .html_url=response.html_url
 
                resolve()
                 },
                 error =>{
-                  this.repo.name = "Error - Unable to get Repo"
+                  this.repository.name = "Error - Unable to get Repository!"
                   reject(error)
                 }
               )
