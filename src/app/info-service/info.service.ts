@@ -3,7 +3,7 @@ import{ HttpClient } from '@angular/common/http';
 import { User } from './../user';
 import { Repository } from './../repository';
 
-import { environment } from './../../environments/environment'
+import { environment } from './../../environments/environment';
 
 @Injectable({
   providedIn: 'root'

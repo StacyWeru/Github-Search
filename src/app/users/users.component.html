@@ -1,44 +1,44 @@
 <div class="container">
-    <ul class="bar">
-      <li>Git-hub Search</li>
-    </ul>
-  
-  
+  <ul class="bar">
+    <li>Git-hub Search</li>
+  </ul>
+
+
   <div class="form">
     <form (ngSubmit)='findUser()' #searchForm='ngForm'>
-         <div class="form-group">
-           <input type="text" class="form-control" placeholder="search users with username" [(ngModel)] ="username" name="username" (keyup)="findUser()">
-        </div>
-       </form>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="search users with username" [(ngModel)]="username"
+          name="username" (keyup)="findUser()">
+      </div>
+    </form>
   </div>
   <h2 appHighlight>user Details</h2>
-  
-      <div class="row">
-        <div class = "avatar">
-              <img src="{{user.avatar_url}}" class="avatarimg" alt="image">
-          </div>
-        </div>
-        <div class="row2">
-           <div class="col-sm-6">
-  
-              <div class="panel">user Name:{{user.name}}</div>
-              <div class="panel"><a href="{{user.url}}">user Url:{{user.url}}</a></div>
-              <div class="panel">user Bio:{{user.bio}}</div>
-              <div class="panel">Location:{{user.location}}</div>
-          </div>
-          <div class="col-sm-6">
-              <label for="Repos"> Repository:{{user.public_repos}}</label><br>
-              <label for="followers">Followers:{{user.followers}}</label><br>
-              <label for="following">Following:{{user.following}}</label>
-              <div class="label label-default">This account was created on {{user.created_at}}</div>
-              <div class="label label-default">{{user.createdDate|joinDateCount}} days ago</div>
-  
-           </div>
-         </div>
-  
-     <div class="row3">
-      <button class="home"><a routerLink='/home' routerLinkActive='active'>Go Back Home</a></button>
+
+  <div class="row">
+    <div class="avatar">
+      <img src="{{user.avatar_url}}" class="avatarimg" alt="image">
     </div>
-  
   </div>
-  
+  <div class="row2">
+    <div class="col-sm-6">
+
+      <div class="panel">user Name:{{user.name}}</div>
+      <div class="panel"><a href="{{user.url}}">user Url:{{user.url}}</a></div>
+      <div class="panel">user Bio:{{user.bio}}</div>
+      <div class="panel">Location:{{user.location}}</div>
+    </div>
+    <div class="col-sm-6">
+      <label for="Repos"> Repository:{{user.public_repos}}</label><br>
+      <label for="followers">Followers:{{user.followers}}</label><br>
+      <label for="following">Following:{{user.following}}</label>
+      <div class="label label-default">This account was created on {{user.created_at}}</div>
+      <div class="label label-default">{{user.createdDate|joinDateCount}} days ago</div>
+
+    </div>
+  </div>
+
+  <div class="row3">
+    <button class="home"><a routerLink='/home' routerLinkActive='active'>Go Back Home</a></button>
+  </div>
+
+</div>

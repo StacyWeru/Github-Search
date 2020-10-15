@@ -1,22 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule ,Routes } from '@angular/router';
 
-import {HomeComponent } from "./home/home.component";
+
 import { NavBarComponent } from "./nav-bar/nav-bar.component";
-import { RepositoryComponent} from "./repository/repository.component";
 import{ UsersComponent} from "../app/users/users.component";
+import { RepositoryComponent} from "./repository/repository.component";
+import {HomeComponent } from "./home/home.component";
 import { NotFoundComponent } from './not-found/not-found.component';
 
 
 const routes: Routes = [
+  { path: '', component:HomeComponent},
   { path:'home', component:HomeComponent},
   { path:'nav-bar' , component:NavBarComponent},
-  { path:'repository', component:RepositoryComponent},
   { path: 'users' , component:UsersComponent},
+  { path:'repository', component:RepositoryComponent},
   { path:'**', component:NotFoundComponent},
 
-  { path: '', redirectTo:"/home", pathMatch:"full"},
+ 
 ];
 
 @NgModule({

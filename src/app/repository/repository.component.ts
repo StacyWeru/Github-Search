@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { InfoService } from '../info-service/info.service';
-import { Repository} from './../repository';
+import { Repository} from '../repository';
 
 @Component({
   selector: 'app-repository',
