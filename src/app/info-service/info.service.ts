@@ -21,7 +21,7 @@ export class InfoService {
    }
    UserRequest(){
               interface ApiResponse{
-                avatar_url:string;
+                avatar_url:any;
                  name:string;
                  url:string;
                  bio:string;
@@ -33,7 +33,7 @@ export class InfoService {
               }
 
              let promise = new Promise((resolve,reject)=>{
-               this.http.get<ApiResponse>(environment.apiUrl+this.username+environment.apiKey).toPromise().then(response=>{
+               this.http.get<ApiResponse>(environment.apiUrl+this.username+environment.apiKey).toPromise().then( response=> { 
                  this.User.avatar_url=response.avatar_url
                  this.User.name=response.name
                  this.User.url=response.url
@@ -64,7 +64,7 @@ export class InfoService {
                 }
 
              let promise = new Promise((resolve,reject)=>{
-               this.http.get<ApiResponse>(environment.apiUrl+ this.username + environment.apiRepos).toPromise().then(response=>{
+               this.http.get<ApiResponse>(environment.apiUrl + this.username + '/repository').toPromise().then(response=>{
                  this.repository.name=response.name
                  this.repository.description=response.description
                  this.repository  .html_url=response.html_url
@@ -85,3 +85,5 @@ export class InfoService {
             }
 
        }
+
+      //  environment.apiUrl+ this.username + environment.apiRepos
