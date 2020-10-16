@@ -1,20 +1,43 @@
-<div class="container">
-  <ul class="bar">
-    <li>Git-hub Search</li>
-  </ul>
+<!-- <form (ngSubmit)=' findUser()' #searchForm='ngForm'>
+  <div *ngFor="let repository of repositories" class="form-group">
+    <input type="text" class="form-control" placeholder="search  git repositories with username" [(ngModel)]="username"
+      name="username" (keyup)=" findUser()">
 
+    <h2>Repository</h2>
+    <p>Repository name:{{repository.name}}</p>
+    <p><a href="{{repository.html_url}}" class="btn btn-sm btn-success pull-right">View this Repository</a></p>
+    <p>Repository description: {{repository.description}}</p>
+
+
+  </div>
+</form> -->
+<div class="container-fluid">
+  <h2 class="text-center">Search for your repository</h2>
+  <hr>
   <form (ngSubmit)=' findUser()' #searchForm='ngForm'>
-    <div *ngFor="let repository of repositories" class="form-group">
+    <div class="form-group">
+
+      <label for="name"> Repository Name Search </label>
       <input type="text" class="form-control" placeholder="search  git repositories with username"
         [(ngModel)]="username" name="username" (keyup)=" findUser()">
-
-      <h2>Repository</h2>
-      <p>Repository name:{{repository.name}}</p>
-      <p><a href="{{repository.html_url}}" class="btn btn-sm btn-success pull-right">View this Repository</a></p>
-      <p>Repository description: {{repository.description}}</p>
-
-
+      <p>Name is required</p>
     </div>
+
+    <button type="submit" class="btn btn-success">Search</button>
+
   </form>
-  <button class="home"><a routerLink='/home' routerLinkActive='active'>GO Back Home</a></button>
+
+  <div *ngFor="let repository of repositories" class="col-md-3">
+    <div class="card" style="width: 18rem">
+      <div class="card-header">
+        <h5 class="card-title">{{ repository.name }} </h5>
+      </div>
+      <div class="card-body">
+        <h2>Repository</h2>
+        <p>Repository name:{{repository.name}}</p>
+        <p><a href="{{repository.html_url}}" class="btn btn-sm btn-success pull-right"> View this Repository </a></p>
+        <p>Repository description: {{repository.description}}</p>
+      </div>
+    </div>
+  </div>
 </div>
