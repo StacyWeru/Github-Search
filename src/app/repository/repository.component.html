@@ -1,20 +1,20 @@
 <div class="container">
-    <ul class="bar">
-      <li>Git-hub Search</li>
-    </ul>
-    
-    <form (ngSubmit)=' findUser()' #searchForm='ngForm'>
-         <div class="form-group">
-           <input type="text" class="form-control" placeholder="search  git repositories with username" [(ngModel)] ="username" name="username" (keyup)=" findUser()">
-         </div>
-       </form>
-  <h2 appHighlight>Repository</h2>
-        <p>Repository name:{{repository.name}}</p>
-        <p><a href="{{Repository.html_url}}" class="btn btn-sm btn-success pull-right">View this Repository</a></p>
-        <p>Repository Description:{{Repository.description}}</p>
-  
-  
-  </div>
-  <div>
-   <button class="home"><a routerLink='/home' routerLinkActive='active'>GO Back Home</a></button>
-  </div>
+  <ul class="bar">
+    <li>Git-hub Search</li>
+  </ul>
+
+  <form (ngSubmit)=' findUser()' #searchForm='ngForm'>
+    <div *ngFor="let repository of repositories" class="form-group">
+      <input type="text" class="form-control" placeholder="search  git repositories with username"
+        [(ngModel)]="username" name="username" (keyup)=" findUser()">
+
+      <h2>Repository</h2>
+      <p>Repository name:{{repository.name}}</p>
+      <p><a href="{{repository.html_url}}" class="btn btn-sm btn-success pull-right">View this Repository</a></p>
+      <p>Repository description: {{repository.description}}</p>
+
+
+    </div>
+  </form>
+  <button class="home"><a routerLink='/home' routerLinkActive='active'>GO Back Home</a></button>
+</div>

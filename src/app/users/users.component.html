@@ -1,8 +1,7 @@
 <div class="container">
-  <ul class="bar">
-    <li>Git-hub Search</li>
-  </ul>
-
+  <div = class="title">
+    <h2>Github Search</h2>
+  </div>
 
   <div class="form">
     <form (ngSubmit)='findUser()' #searchForm='ngForm'>
@@ -12,7 +11,7 @@
       </div>
     </form>
   </div>
-  <h2 appHighlight>user Details</h2>
+  <h2>User Details</h2>
 
   <div class="row">
     <div class="avatar">
@@ -20,14 +19,14 @@
     </div>
   </div>
   <div class="row2">
-    <div class="col-sm-6">
+    <div  *ngFor="let user of users" class="col-sm-6">
 
       <div class="panel">user Name:{{user.name}}</div>
       <div class="panel"><a href="{{user.url}}">user Url:{{user.url}}</a></div>
       <div class="panel">user Bio:{{user.bio}}</div>
       <div class="panel">Location:{{user.location}}</div>
     </div>
-    <div class="col-sm-6">
+    <div  class="col-sm-6">
       <label for="Repos"> Repository:{{user.public_repos}}</label><br>
       <label for="followers">Followers:{{user.followers}}</label><br>
       <label for="following">Following:{{user.following}}</label>
